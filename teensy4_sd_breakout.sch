@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:teensy4_sd_breakout-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -29,37 +30,10 @@ Text Label 6500 2550 0    50   ~ 0
 DAT3
 Text Label 6500 2450 0    50   ~ 0
 DAT2
-$Comp
-L Connector:Micro_SD_Card_Det J2
-U 1 1 5D85967D
-P 7950 2850
-F 0 "J2" H 7900 3667 50  0000 C CNN
-F 1 "Micro_SD_Card_Det" H 7900 3576 50  0000 C CNN
-F 2 "Connector_Card:microSD_HC_Hirose_DM3D-SF" H 10000 3550 50  0001 C CNN
-F 3 "https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&item_id=195&is_series=1" H 7950 2950 50  0001 C CNN
-	1    7950 2850
-	1    0    0    -1  
-$EndComp
 Text Label 8750 3350 0    50   ~ 0
 GND
-Text Label 7050 3350 2    50   ~ 0
+Text Label 6500 3350 0    50   ~ 0
 GND
-Wire Wire Line
-	7050 2450 6500 2450
-Wire Wire Line
-	7050 2550 6500 2550
-Wire Wire Line
-	6500 2650 7050 2650
-Wire Wire Line
-	7050 2750 6500 2750
-Wire Wire Line
-	6500 2850 7050 2850
-Wire Wire Line
-	7050 2950 6500 2950
-Wire Wire Line
-	6500 3050 7050 3050
-Wire Wire Line
-	7050 3150 6500 3150
 $Comp
 L Connector_Generic:Conn_01x09 J1
 U 1 1 5D8549FA
@@ -86,32 +60,75 @@ Wire Wire Line
 	6500 2350 6700 2350
 Wire Wire Line
 	7000 2350 7000 3250
-Wire Wire Line
-	7000 3250 7050 3250
 Text Label 6500 2350 0    50   ~ 0
 29
 $Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 5D86631A
-P 7050 3350
-F 0 "#FLG0101" H 7050 3425 50  0001 C CNN
-F 1 "PWR_FLAG" H 7050 3523 50  0000 C CNN
-F 2 "" H 7050 3350 50  0001 C CNN
-F 3 "~" H 7050 3350 50  0001 C CNN
-	1    7050 3350
-	-1   0    0    1   
-$EndComp
-$Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5D867552
-P 6600 3350
-F 0 "#FLG0102" H 6600 3425 50  0001 C CNN
-F 1 "PWR_FLAG" H 6600 3523 50  0000 C CNN
-F 2 "" H 6600 3350 50  0001 C CNN
-F 3 "~" H 6600 3350 50  0001 C CNN
-	1    6600 3350
+P 5850 3100
+F 0 "#FLG0102" H 5850 3175 50  0001 C CNN
+F 1 "PWR_FLAG" H 5850 3273 50  0000 C CNN
+F 2 "" H 5850 3100 50  0001 C CNN
+F 3 "~" H 5850 3100 50  0001 C CNN
+	1    5850 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5D8A3C4C
+P 5850 3250
+F 0 "C1" H 5942 3296 50  0000 L CNN
+F 1 "C_Small" H 5942 3205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5850 3250 50  0001 C CNN
+F 3 "~" H 5850 3250 50  0001 C CNN
+	1    5850 3250
+	1    0    0    -1  
+$EndComp
+Text Label 5850 3150 2    50   ~ 0
+3V3
+Wire Wire Line
+	7050 3150 6500 3150
+Wire Wire Line
+	6500 3050 7050 3050
+Wire Wire Line
+	7050 2950 6500 2950
+Wire Wire Line
+	6500 2850 7050 2850
+Wire Wire Line
+	7050 2750 6500 2750
+Wire Wire Line
+	6500 2650 7050 2650
+Wire Wire Line
+	7050 2550 6500 2550
+Wire Wire Line
+	7000 3250 7050 3250
+Wire Wire Line
+	7050 2450 6500 2450
+$Comp
+L Connector:Micro_SD_Card_Det J2
+U 1 1 5D85967D
+P 7950 2850
+F 0 "J2" H 7900 3667 50  0000 C CNN
+F 1 "Micro_SD_Card_Det" H 7900 3576 50  0000 C CNN
+F 2 "Connector_Card:microSD_HC_Hirose_DM3D-SF" H 10000 3550 50  0001 C CNN
+F 3 "https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&item_id=195&is_series=1" H 7950 2950 50  0001 C CNN
+	1    7950 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5D86631A
+P 5850 3350
+F 0 "#FLG0101" H 5850 3425 50  0001 C CNN
+F 1 "PWR_FLAG" H 5850 3523 50  0000 C CNN
+F 2 "" H 5850 3350 50  0001 C CNN
+F 3 "~" H 5850 3350 50  0001 C CNN
+	1    5850 3350
 	-1   0    0    1   
 $EndComp
-Text Label 6600 3350 0    50   ~ 0
-3V3
+Connection ~ 5850 3350
+Wire Wire Line
+	5850 3350 7050 3350
+Wire Wire Line
+	5850 3100 5850 3150
 $EndSCHEMATC

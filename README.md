@@ -6,10 +6,12 @@ Designed in KiCad.
 
 Notes:
 
-- In progress: Will be ordered soon.
+- In progress: Ordered
 - With longer header pins you should be able to flip the board to be under or over the Teensy 4.0
+- Uses [Hirose DM3D microSD socket](https://www.digikey.com/product-detail/en/hirose-electric-co-ltd/DM3D-SF/HR1941CT-ND/1786515)
+- Added decoupling cap C1, 0.1uF
 
-Left Side Pinout:
+Pinout:
 
 1. 34/SD DAT1
 2. 35/SD DAT0
