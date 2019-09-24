@@ -21,4 +21,4 @@ Pinout:
 6. 37/SD CMD
 7. 38/SD DAT3
 8. 39/SD DAT2
-9. 29
+9. 29/Card Detect
