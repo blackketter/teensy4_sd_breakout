@@ -3,13 +3,15 @@ A companion breakout board with microSD connector to mate with the [Teensy 4 Hea
 Designed in KiCad.
 
 ![breakout render](render.png)
+![breakout render_back](render_back.png)
 
 Notes:
 
-- In progress: Ordered
+- In progress: First version works great!
 - With longer header pins you should be able to flip the board to be under or over the Teensy 4.0
 - Uses [Hirose DM3D microSD socket](https://www.digikey.com/product-detail/en/hirose-electric-co-ltd/DM3D-SF/HR1941CT-ND/1786515)
 - Added decoupling cap C1, 0.1uF
+- Bridge the CARD DETECT jumper to use pin 29 to detect a card in the slot.  Needs INPUT_PULLUP.
 
 Pinout:
 
